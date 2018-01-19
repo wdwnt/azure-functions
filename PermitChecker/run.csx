@@ -1,5 +1,12 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using CsvHelper;
+using CsvHelper.Configuration;
 using RestSharp;
+using RestSharp.Extensions;
 
 public static void Run(TimerInfo myTimer, TraceWriter log)
 {
@@ -7,8 +14,7 @@ public static void Run(TimerInfo myTimer, TraceWriter log)
 
     var results = GetSfwmdResults(DateTime.Now, DateTime.Now).ToList();
 
-
-
+    log.Info(String.Join(",", results.Select(r => r.ApplicationNum).ToArray()));
 }
 
 private static IEnumerable<Sfwmd> GetSfwmdResults(DateTime fromDate, DateTime toDate, string permitNumber = "48-00714-P")
