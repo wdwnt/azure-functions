@@ -38,7 +38,7 @@ public class NotificationManager
         });
 
         var response = restClient.Execute(webhookRequest);
-        Console.WriteLine(response.Content);
+        _logger.Info(response.Content);
     }
 
     private static string FormatMessageBody(Sfwmd result)
