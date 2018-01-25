@@ -43,6 +43,6 @@ public class NotificationManager
 
     private static string FormatMessageBody(Sfwmd result)
     {
-        return $"*SFWMD Update*\nApplication Number: {result.ApplicationNum}\nProject Name: {result.ProjectName}";
+        return $"*SFWMD Update*\nApplication Number: {result.ApplicationNum}\nProject Name: {result.ProjectName}\n<http://apps.sfwmd.gov/WAB/ePermittingWebApp/index.html?mobileBreakPoint=300&slayer=0&exprnum=0&esearch={result.ApplicationNum}|Details>";
     }
 }
