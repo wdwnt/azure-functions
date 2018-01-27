@@ -28,7 +28,7 @@ public class NotificationManager
         webhookRequest.RequestFormat = DataFormat.Json;
         webhookRequest.AddBody(new {
             text = message,
-            icon_emoji = iconEmoji
+            icon_emoji = $":{iconEmoji}:"
         });
 
         var response = restClient.Execute(webhookRequest);
@@ -37,6 +37,6 @@ public class NotificationManager
     
     public async Task SendSfwmdSlackNotification(string message)
     {
-        await SendSlackNotification(message, ":potable_water:");
+        await SendSlackNotification(message, "potable_water");
     }
 }
