@@ -34,9 +34,4 @@ public class NotificationManager
         var response = restClient.Execute(webhookRequest);
         _logger.Info(response.Content);
     }
-    
-    public async Task SendSfwmdSlackNotification(string message)
-    {
-        await SendSlackNotification(message, "potable_water");
-    }
 }
