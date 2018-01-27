@@ -26,7 +26,7 @@ public static async Task Run(TimerInfo myTimer, TraceWriter log)
             await _airtableHandler.AddRecordToTable(result);
 
             var message = $"*SFWMD Update*\nApplication Number: {result.ApplicationNum}\nProject Name: {result.ProjectName}\n<http://apps.sfwmd.gov/WAB/ePermittingWebApp/index.html?mobileBreakPoint=300&slayer=0&exprnum=0&esearch={result.ApplicationNum}|Details>";
-            await _notificationManager.SendSfwmdSlackNotification(message);
+            await _notificationManager.SendSlackNotification(message, "potable_water");
         }
     }
 }
