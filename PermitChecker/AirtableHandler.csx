@@ -1,4 +1,4 @@
-#load "Utility.csx"
+#load "..\Shared\Utility.csx"
 
 using AirtableApiClient;
 
