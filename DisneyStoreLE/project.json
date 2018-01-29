@@ -1,0 +1,12 @@
+
+{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "Airtable": "0.9.2",
+        "HtmlAgilityPack": "1.6.15",
+        "RestSharp": "106.2.1"
+      }
+    }
+   }
+}
