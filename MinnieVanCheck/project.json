@@ -1,0 +1,11 @@
+{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "Airtable": "0.9.2",
+        "Newtonsoft.Json":"10.0.3",
+        "RestSharp": "106.2.1"
+      }
+    }
+   }
+}
